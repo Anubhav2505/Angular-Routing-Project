@@ -1,0 +1,30 @@
+<div class="text-center" style="margin-top: 80px;">
+    <img src="../../assets/bank.jpg">
+  </div>
+
+<form style="position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%);">
+    <div class="row align-items-center">
+    <div class="col mb-3">
+      <label for="exampleInputAmount" class="form-label">Enter Amount</label>
+      <input type="text" class="form-control" [(ngModel)]="Amount" name="Amount">
+      
+    </div>
+    <div class="col mb-3" >
+        <label for="exampleInputAmount" class="form-label">Current Balance</label>
+        <input disabled type="text" class="form-control" [(ngModel)]="RemainigBalance" name="RemainigBalance">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <button type="button" class="btn btn-primary" (click)=Add()>Open Account</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary" (click)=Withdraw()>Withdraw</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary" (click)=Deposit()>Deposit</button>
+        </div>
+</div>
+
+
+  </form>

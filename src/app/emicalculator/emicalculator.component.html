@@ -1,0 +1,58 @@
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"/>
+<h1 class="title">
+    Emi Calculator
+</h1>
+
+<div class="form1">
+    <form name="form" #frm="ngForm" (ngSubmit)="frm.valid && Cal()" >
+        <div class="row mb-4 align-items-center">
+            <label class="col-2 ">Amount:</label>
+            <div class="col-5">
+                <input type="number" [(ngModel)]="Amount" name="Amount" placeholder="Enter Amount" >
+            </div>
+        </div>
+        <div class="row mb-4 align-items-center">
+            <label class="col-2 ">Interest:</label>
+            <div class="col-5 ">
+                <input type="number" [(ngModel)]="Interest" name="Interest" placeholder="Rate of Interest"/>
+            </div>
+        </div>
+        <div class="row mb-4 align-items-center">
+            <label class="col-2 ">Time:</label>
+            <div class="col-5">
+                <input type="number" [(ngModel)]="years"  name="years" placeholder="Enter Years"/>
+            </div>
+        </div>
+        <div class="buttonholder">
+        <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+    </form>
+</div>
+<section class="section"> 
+    <h1 class="title">Calculated Results</h1>
+    <div class="columns is-multiline">
+
+      <div class="column is-4-tablet ">
+        <div class="notification is-primary has-text">
+          <p id="monthlyPayment"  class="title is-1">₹ {{monthlyPayment}}</p>
+          <p class="subtitle is-4">Monthly Payments</p>
+        </div>
+      </div>
+
+      <div class="column is-4-tablet ">
+        <div class="notification is-info has-text">
+          <p id="totalInterest" class="title is-1">₹{{totalInterest}}</p>
+          <p class="subtitle is-4">Total Interest</p>
+        </div>
+      </div>
+
+      <div class="column is-4-tablet ">
+        <div class="notification is-link has-text">
+          <p id="totalPayment" class="title is-1">₹{{totalPayment}}</p>
+          <p class="subtitle is-4">Total Amount</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
